@@ -38,7 +38,7 @@ public class SupportService {
         errorSchema.setErrorMessage(errorMessage);
         response.setErrorSchema(errorSchema);
         response.setOutputSchema(support);
-        repository.save(support)
+        repository.save(support);
         return response;
     }
 }
