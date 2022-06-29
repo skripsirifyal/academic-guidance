@@ -46,7 +46,7 @@ public class Guidance extends UserDateAudit {
     private Purpose purpose;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "purpose_id", nullable = false)
+    @JoinColumn(name = "support_id", nullable = false)
     @JsonIgnore
     private Support support;
 }
