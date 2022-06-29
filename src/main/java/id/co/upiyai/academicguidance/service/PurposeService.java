@@ -29,6 +29,7 @@ public class PurposeService {
         Purpose purpose = new Purpose();
         purpose.setPurposeName(request.getPurposeName());
         purpose.setIsActive(true);
+        repository.save(purpose);
 
         CommonResponse response = new CommonResponse();
         ErrorSchema errorSchema = new ErrorSchema();
@@ -40,7 +41,6 @@ public class PurposeService {
         response.setErrorSchema(errorSchema);
         response.setOutputSchema(purpose);
 
-        repository.save(purpose);
         return response;
     }
 

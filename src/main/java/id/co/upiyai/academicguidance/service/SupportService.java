@@ -28,6 +28,7 @@ public class SupportService {
         Support support = new Support();
         support.setSupportName(request.getSupportName());
         support.setIsActive(true);
+        repository.save(support);
 
         CommonResponse response = new CommonResponse();
         ErrorSchema errorSchema = new ErrorSchema();
@@ -38,7 +39,7 @@ public class SupportService {
         errorSchema.setErrorMessage(errorMessage);
         response.setErrorSchema(errorSchema);
         response.setOutputSchema(support);
-        repository.save(support);
+
         return response;
     }
 }
